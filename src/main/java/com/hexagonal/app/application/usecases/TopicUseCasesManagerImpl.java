@@ -6,14 +6,14 @@ import java.util.Optional;
 import com.hexagonal.app.domain.model.Topic;
 import com.hexagonal.app.domain.ports.outputs.ModelDataManagerRepository;
 
-public class TopicUseCasesManagerImpl implements ModelDataManagerRepository<Topic>{
-	
+public class TopicUseCasesManagerImpl implements ModelDataManagerRepository<Topic> {
+
 	private final ModelDataManagerRepository<Topic> topicDataManagerRepository;
-	
+
 	public TopicUseCasesManagerImpl(ModelDataManagerRepository<Topic> topicDataManagerRepository) {
 		this.topicDataManagerRepository = topicDataManagerRepository;
 	}
-	
+
 	@Override
 	public Optional<Topic> getById(int id) {
 		// TODO Auto-generated method stub
@@ -27,7 +27,7 @@ public class TopicUseCasesManagerImpl implements ModelDataManagerRepository<Topi
 	}
 
 	@Override
-	public boolean create(Topic item) {
+	public Topic create(Topic item) {
 		// TODO Auto-generated method stub
 		return this.topicDataManagerRepository.create(item);
 	}
@@ -44,6 +44,4 @@ public class TopicUseCasesManagerImpl implements ModelDataManagerRepository<Topi
 		return this.topicDataManagerRepository.delete(id);
 	}
 
-	
-	
 }

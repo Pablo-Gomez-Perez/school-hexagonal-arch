@@ -7,14 +7,14 @@ import com.hexagonal.app.domain.model.Teacher;
 import com.hexagonal.app.domain.ports.inputs.ModelUseCasesManager;
 import com.hexagonal.app.domain.ports.outputs.ModelDataManagerRepository;
 
-public class TeacherUseCasesManagerImpl implements ModelUseCasesManager<Teacher>{
-	
+public class TeacherUseCasesManagerImpl implements ModelUseCasesManager<Teacher> {
+
 	private final ModelDataManagerRepository<Teacher> teacherDataManagerRepository;
-	
+
 	public TeacherUseCasesManagerImpl(ModelDataManagerRepository<Teacher> teacherDataManagerRepository) {
 		this.teacherDataManagerRepository = teacherDataManagerRepository;
 	}
-	
+
 	@Override
 	public Optional<Teacher> getById(int id) {
 		// TODO Auto-generated method stub
@@ -28,7 +28,7 @@ public class TeacherUseCasesManagerImpl implements ModelUseCasesManager<Teacher>
 	}
 
 	@Override
-	public boolean create(Teacher item) {
+	public Teacher create(Teacher item) {
 		// TODO Auto-generated method stub
 		return this.teacherDataManagerRepository.create(item);
 	}
@@ -45,6 +45,4 @@ public class TeacherUseCasesManagerImpl implements ModelUseCasesManager<Teacher>
 		return this.teacherDataManagerRepository.delete(id);
 	}
 
-	
-	
 }

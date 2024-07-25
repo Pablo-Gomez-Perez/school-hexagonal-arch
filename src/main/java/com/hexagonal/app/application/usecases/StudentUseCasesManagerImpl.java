@@ -7,11 +7,10 @@ import com.hexagonal.app.domain.model.Student;
 import com.hexagonal.app.domain.ports.inputs.ModelUseCasesManager;
 import com.hexagonal.app.domain.ports.outputs.ModelDataManagerRepository;
 
-public class StudentUseCasesManagerImpl implements ModelUseCasesManager<Student>{
-	
+public class StudentUseCasesManagerImpl implements ModelUseCasesManager<Student> {
+
 	private final ModelDataManagerRepository<Student> studentDataManagerRepository;
-		
-	
+
 	public StudentUseCasesManagerImpl(ModelDataManagerRepository<Student> studentDataManagerRepository) {
 		super();
 		this.studentDataManagerRepository = studentDataManagerRepository;
@@ -30,7 +29,7 @@ public class StudentUseCasesManagerImpl implements ModelUseCasesManager<Student>
 	}
 
 	@Override
-	public boolean create(Student item) {
+	public Student create(Student item) {
 		// TODO Auto-generated method stub
 		return this.studentDataManagerRepository.create(item);
 	}
@@ -47,7 +46,4 @@ public class StudentUseCasesManagerImpl implements ModelUseCasesManager<Student>
 		return this.studentDataManagerRepository.delete(id);
 	}
 
-	
-	
-	
 }

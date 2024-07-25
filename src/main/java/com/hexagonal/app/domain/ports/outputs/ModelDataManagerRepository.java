@@ -9,7 +9,7 @@ public Optional<T> getById(int id);
 	
 	public List<T> listAll(String name);
 	
-	public boolean create(T item);
+	public T create(T item);
 	
 	public Optional<T> update(T item);
 	

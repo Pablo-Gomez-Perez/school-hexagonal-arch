@@ -8,6 +8,7 @@ public class Student {
 	 private String name;
 	 private String phoneNumber;
 	 private String email;
+	 
 	public Student(int idStudent, char grade, char group, String name, String phoneNumber, String email) {
 		super();
 		this.idStudent = idStudent;
